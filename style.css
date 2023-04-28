@@ -25,22 +25,22 @@ nav {
   background-color: var(--primary-color-2);
   font-family: "Poppins", sans-serif;
 }
-.logo a{
+.logo a {
   color: var(--primary-color-1);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 1.6rem;
   box-shadow: 3px 3px var(--border--color-);
   cursor: pointer;
- text-decoration: none;
- font-weight: 500;
+  text-decoration: none;
+  font-weight: 500;
 }
 .nav-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
   padding-top: 1rem;
+  gap: 1rem;
 }
 .nav-links li {
   list-style-type: none;
@@ -49,10 +49,10 @@ nav {
   text-decoration: none;
   color: var(--primary-color-1);
   letter-spacing: 3px;
- font-weight: 900;
+  font-weight: 900;
   font-size: 1.1rem;
 }
-.fa-solid,
+.fas-solid,
 .fas {
   display: none;
   color: var(--primary-color-1);
@@ -62,10 +62,14 @@ nav {
   display: none;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
   color: var(--border--color-);
 }
+#burger{
+  display: none;
+}
 @media screen and (max-width: 768px) {
+ 
   .nav-links {
     position: absolute;
     right: 0px;
@@ -76,14 +80,18 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 50%;
+  
     padding: 2rem 0;
     transform: translateX(100%);
+    display: none;
     transition: transform 0.5s ease-in;
   }
 
   .fa-solid,
   .fas {
+    display: block;
+  }
+  #burger{
     display: block;
   }
   #close {
@@ -97,16 +105,34 @@ nav {
   }
 }
 /*desktop*/
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .nav-links {
     width: 50%;
+    overflow-x: hidden;
+    
+  }
+  #close {
+    display: none;
+  }
+  #burger{
+    display: none;
   }
 }
 .nav-active {
+  width: 50%;
+  display:flex;
+  overflow-x: hidden;
   transform: translateX(0%);
+
 }
 
+
 /*end of nav styles*/
+
+
+
+
+
 
 /*start of hero section*/
 .hero {
@@ -158,8 +184,24 @@ nav {
   color: var(--border--color-);
   animation-duration: 4s;
 }
+
+.action-btn {
+  animation-duration: 4s;
+  padding: 0.5rem;
+  width: 5rem;
+  border: none;
+  background-color: var(--primary-color-2);
+  border: 1px var(--border--color-) solid;
+  border-radius: 3px;
+  color: var(--primary-color-1);
+}
+.action-btn a {
+  text-decoration: none;
+  color: var(--primary-color-1);
+}
 /*mobile*/
 @media screen and (max-width: 768px) {
+  
   .hero {
     flex-direction: column-reverse;
     margin: 5rem 3rem 5rem 3rem;
@@ -180,6 +222,8 @@ nav {
   .text-cintainer h1 {
     font-size: 1.5rem;
   }
+  
+
 }
 /*ipad*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -273,14 +317,13 @@ nav {
 }
 
 .skills-card-container h3 {
-  font-size: .9rem;
+  font-size: 0.9rem;
   width: 140px;
   font-weight: bolder;
   color: var(--p-color--);
   font-family: "Poppins", sans-serif;
   padding: 0.5rem;
   text-align: center;
-
 }
 
 .content-img-container {
@@ -317,7 +360,6 @@ nav {
   gap: 1rem;
   text-align: start;
   justify-content: flex-start;
- 
 }
 .about-text-wrapper h1 {
   text-align: start;
@@ -333,9 +375,8 @@ nav {
   font-size: 1.2rem;
   color: #5b7c91aa;
   font-family: "Poppins", sans-serif;
-  
 }
-.about-text-wrapper a{
+.about-text-wrapper a {
   text-align: start;
   font-size: 1.2rem;
   color: var(--border--color-);
@@ -344,7 +385,7 @@ nav {
   text-decoration: none;
   font-weight: 600;
 }
-.about-text-wrapper a:hover{
+.about-text-wrapper a:hover {
   color: var(--p-color--);
 }
 /*mobile*/
@@ -385,7 +426,7 @@ nav {
     text-align: center;
     font-size: 1.2rem;
   }
-  .about-text-wrapper a{
+  .about-text-wrapper a {
     text-align: center;
     font-size: 1.2rem;
   }
@@ -434,18 +475,8 @@ nav {
     text-align: center;
     font-size: 1.2rem;
   }
-
-
 }
 /*end of about*/
-
-
-
-
-
-
-
-
 
 /*animation*/
 @-webkit-keyframes fadeIn {

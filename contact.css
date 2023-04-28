@@ -15,7 +15,6 @@
 body {
   overflow-x: hidden;
 }
-
 /*start of nav styles*/
 nav {
   display: flex;
@@ -25,21 +24,21 @@ nav {
   background-color: var(--primary-color-2);
   font-family: "Poppins", sans-serif;
 }
-.logo a{
+.logo a {
   color: var(--primary-color-1);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 1.6rem;
   box-shadow: 3px 3px var(--border--color-);
   cursor: pointer;
- text-decoration: none;
- font-weight: 500;
+  text-decoration: none;
+  font-weight: 500;
 }
 .nav-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  gap: 1rem;
   padding-top: 1rem;
 }
 .nav-links li {
@@ -49,10 +48,10 @@ nav {
   text-decoration: none;
   color: var(--primary-color-1);
   letter-spacing: 3px;
- font-weight: 900;
+  font-weight: 900;
   font-size: 1.1rem;
 }
-.fa-solid,
+.fas-solid,
 .fas {
   display: none;
   color: var(--primary-color-1);
@@ -62,10 +61,14 @@ nav {
   display: none;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
   color: var(--border--color-);
 }
+#burger{
+  display: none;
+}
 @media screen and (max-width: 768px) {
+ 
   .nav-links {
     position: absolute;
     right: 0px;
@@ -76,14 +79,18 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 50%;
+  
     padding: 2rem 0;
     transform: translateX(100%);
+    display: none;
     transition: transform 0.5s ease-in;
   }
 
   .fa-solid,
   .fas {
+    display: block;
+  }
+  #burger{
     display: block;
   }
   #close {
@@ -97,16 +104,31 @@ nav {
   }
 }
 /*desktop*/
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .nav-links {
     width: 50%;
+    overflow-x: hidden;
+    
+  }
+  #close {
+    display: none;
+  }
+  #burger{
+    display: none;
   }
 }
 .nav-active {
+  width: 50%;
+  display:flex;
+  overflow-x: hidden;
   transform: translateX(0%);
+
 }
 
+
 /*end of nav styles*/
+
+
 
 /*contact section*/
 
