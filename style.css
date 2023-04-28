@@ -80,7 +80,10 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+<<<<<<< HEAD
   
+=======
+>>>>>>> cac055267e86406e71136c7fbbe857d68b240ebb
     padding: 2rem 0;
     transform: translateX(100%);
     display: none;
